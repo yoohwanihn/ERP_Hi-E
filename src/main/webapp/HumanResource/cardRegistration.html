@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>신규 인사카드등록</title>
+    <!-- css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <style>
+      /* 전체 테이블 스타일링 */
+      .employee-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      /* 레이블 스타일링 */
+      .label {
+        font-weight: bold;
+        padding: 10px;
+        border: 1px solid #ccc;
+        text-align: right;
+        width: 25%;
+      }
+
+      /* 입력 필드 스타일링 */
+      .input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        width: 25%;
+      }
+
+      /* 입력 필드 사이의 간격 조정 */
+      .input:nth-child(odd) {
+        border-left: none;
+      }
+
+      /* 주소 입력 필드는 넓게 설정 */
+      .input:last-child {
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <table class="employee-table">
+      <tr>
+        <td class="highlight-label">사원번호</td>
+        <td class="highlight-input">
+          <input type="text" name="name" value="" />
+        </td>
+        <td class="highlight-label">성명</td>
+        <td class="highlight-input">
+          <input type="text" name="name" value="" />
+        </td>
+      </tr>
+      <tr>
+        <td class="highlight-label">영문이름</td>
+        <td class="highlight-input">
+          <input type="text" name="name" value="" />
+        </td>
+        <td class="highlight-label">중문이름</td>
+        <td class="highlight-input">
+          <input type="text" name="name" value="" />
+        </td>
+      </tr>
+      <tr>
+        <td class="highlight-label">주민등록번호</td>
+        <td class="highlight-input">
+          <input type="text" name="name" value="" />
+        </td>
+        <td class="highlight-label">세대주여부</td>
+        <td class="highlight-input">
+          <input type="text" name "name" value="" />
+        </td>
+      </tr>
+      <tr>
+        <td class="highlight-label">부서코드</td>
+        <td class="highlight-input">
+          <input type="text" name="name" value="" />
+        </td>
+        <td class="highlight-label">프로젝트</td>
+        <td class="highlight-input">
+          <input type="text" name="name" value="" />
+        </td>
+      </tr>
+      <tr>
+        <td class="highlight-label">직위/직급</td>
+        <td class="highlight-input">
+          <input type="text" name="name" value="" />
+        </td>
+        <td class="highlight-label">직책</td>
+        <td class="highlight-input">
+          <input type="text" name="name" value="" />
+        </td>
+      </tr>
+      <tr>
+        <td class="highlight-label">전화</td>
+        <td class="highlight-input">
+          <input type="text" name="name" value="" />
+        </td>
+        <td class="highlight-label">모바일</td>
+        <td class="highlight-input">
+          <input type="text" name="name" value="" />
+        </td>
+      </tr>
+      <tr>
+        <td class="highlight-label">여권번호</td>
+        <td class="highlight-input">
+          <input type="text" name="name" value="" />
+        </td>
+        <td class="highlight-label">메일</td>
+        <td class="highlight-input">
+          <input type="text" name="name" value="" />
+        </td>
+      </tr>
+      <tr>
+        <td class="highlight-label">입사일자</td>
+        <td class="highlight-input">
+          <input type="text" name="name" value="" />
+        </td>
+        <td class="highlight-label">입사구분</td>
+        <td class="highlight-input">
+          <input type="text" name="name" value="" />
+        </td>
+      </tr>
+      <tr>
+        <td class="highlight-label">퇴사일자</td>
+        <td class="highlight-input">
+          <input type="text" name="name" value="" />
+        </td>
+        <td class="highlight-label">퇴사사유</td>
+        <td class="highlight-input">
+          <input type="text" name="name" value="" />
+        </td>
+      </tr>
+      <tr>
+        <td class="highlight-label">우편번호</td>
+        <td class="highlight-input">
+          <input type="text" name="name" value="" />
+        </td>
+      </tr>
+      <tr>
+        <td class="highlight-label">주소</td>
+        <td class="highlight-input">
+          <input type="text" name="name" value="" />
+        </td>
+      </tr>
+    </table>
+
+    <div class="btn-group" role="group" aria-label="Basic outlined example">
+      <button type="button" class="btn btn-outline-primary">저장(F8)</button>
+      <button type="button" class="btn btn-outline-primary">다시 작성</button>
+      <button
+        type="button"
+        class="btn btn-outline-primary"
+        onclick="closeWindow()"
+      >
+        닫기
+      </button>
+      
+     <a href="/ERP_Hi-E/Commute/employeeSearch.html"><button type="button" class="btn btn-outline-primary">뒤로 가기</button></a>
+    </div>
+
+    <script>
+      function closeWindow() {
+        if (confirm("창을 닫으시겠습니까?")) {
+          window.close();
+        }
+      }
+    </script>
+
+    <!-- js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>출/퇴근 기록부(사원)</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Commute</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDarkDropdown"
+          aria-controls="navbarNavDarkDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <button
+                class="btn btn-dark dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <b>List</b>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li>
+                  <a class="dropdown-item" href="../Commute/commuteList.html"
+                    >출/퇴근 기록부(사원)</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../Commute/commuteStatus.html"
+                    >출/퇴근 현황(사원)</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <h3>출/퇴근 기록부(사원)</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">일자</th>
+          <th scope="col">사원명</th>
+          <th scope="col">소속부서</th>
+          <th scope="col">출근시간</th>
+          <th scope="col">퇴근시간</th>
+          <th scope="col">내/외근</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>
+            <a href="../Commute/leaveWork.html"> 2023/10/11 </a>
+          </td>
+          <td>김개발</td>
+          <td>개발팀</td>
+          <td>2023/10/11 오후 7:32:44</td>
+          <td>2023/10/11 오후 7:33:18</td>
+          <td>내근</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>
+            <a href="../Commute/leaveWork.html"> 2023/10/11 </a>
+          </td>
+          <td>문개발</td>
+          <td>개발팀</td>
+          <td>2023/10/11 오후 7:32:49</td>
+          <td>2023/10/11 오후 7:33:05</td>
+          <td>내근</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>
+            <a href="../Commute/leaveWork.html"> 2023/10/11 </a>
+          </td>
+          <td>강교육</td>
+          <td>교육팀</td>
+          <td>2023/10/11 오후 3:11:02</td>
+          <td>2023/10/11 오후 3:14:38</td>
+          <td>내근</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <a class="btn btn-primary" href="../Commute/goWork.html" role="button"
+      >신규(F2)</a
+    >
+    <button type="button" class="btn btn-light">선택 삭제</button>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

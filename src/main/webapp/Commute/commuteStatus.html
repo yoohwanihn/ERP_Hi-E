@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>출/퇴근 현황</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <style>
+      .brg {
+        background-color: #f4f4f4;
+        font-family: Arial, sans-serif;
+        margin-right: 50%;
+      }
+
+      input[type="datetime-local"] {
+        width: 200px;
+        padding: 5px;
+        border: 1px solid #ccc;
+      }
+
+      .input-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .input-group-text {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 8px 10px;
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 5px;
+        border: 1px solid #ccc;
+      }
+
+      .form-check {
+        margin: 10px 0;
+      }
+
+      .form-check-input {
+        margin-right: 5px;
+      }
+
+      .container {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Commute</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDarkDropdown"
+          aria-controls="navbarNavDarkDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <button
+                class="btn btn-dark dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <b>List</b>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li>
+                  <a class="dropdown-item" href="../Commute/commuteList.html"
+                    >출/퇴근 기록부(사원)</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../Commute/commuteStatus.html"
+                    >출/퇴근 현황(사원)</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <h3>출/퇴근현황(사원)</h3>
+    <div class="brg">
+      <label for="datetime">
+        기간: &nbsp;
+        <input
+          type="datetime-local"
+          id="datetime"
+          max="2030-06-20T21:00"
+          min="1900-06-05T12:30"
+          value="2023-10-11T13:27"
+        />
+        <span style="padding-bottom: 50px"></span>
+      </label>
+      <label for="datetime">
+        ~
+        <input
+          type="datetime-local"
+          id="datetime"
+          max="2030-06-20T21:00"
+          min="1900-06-05T12:30"
+          value="2023-10-11T13:27"
+        />
+        <span style="padding-bottom: 50px"></span>
+      </label>
+
+      <div class="input-group mb-3">
+        사원명: &nbsp;
+        <a href="../Commute/employeeSearch.html">
+          <span class="input-group-text" id="basic-addon1">
+            <!--돋보기-->
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-search"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+              />
+            </svg>
+
+            <!--돋보기-->
+          </span>
+        </a>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Username"
+          aria-label="Username"
+          aria-describedby="basic-addon1"
+        />
+      </div>
+
+      <div class="input-group mb-3">
+        부서: &nbsp;
+        <span class="input-group-text" id="basic-addon2">
+          <!--돋보기-->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-search"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+            />
+          </svg>
+          <!--돋보기-->
+        </span>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Deptno"
+          aria-label="Username"
+          aria-describedby="basic-addon2"
+        />
+      </div>
+
+      <div class="container">
+        내/외근:
+        <div style="display: flex">
+          <div class="form-check" style="margin-right: 20px">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault1"
+            />
+            <label class="form-check-label" for="flexRadioDefault1">전체</label>
+          </div>
+          <div class="form-check" style="margin-right: 20px">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault2"
+            />
+            <label class="form-check-label" for="flexRadioDefault2">내근</label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault3"
+            />
+            <label class="form-check-label" for="flexRadioDefault3">외근</label>
+          </div>
+        </div>
+
+        업무일/휴일구분:
+        <div style="display: flex">
+          <div class="form-check" style="margin-right: 20px">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault1"
+            />
+            <label class="form-check-label" for="flexRadioDefault1">전체</label>
+          </div>
+          <div class="form-check" style="margin-right: 20px">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault2"
+            />
+            <label class="form-check-label" for="flexRadioDefault2"
+              >업무일
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault3"
+            />
+            <label class="form-check-label" for="flexRadioDefault3"
+              >휴일
+            </label>
+          </div>
+        </div>
+
+        재직구분:
+        <div style="display: flex">
+          <div class="form-check" style="margin-right: 20px">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault1"
+            />
+            <label class="form-check-label" for="flexRadioDefault1">전체</label>
+          </div>
+          <div class="form-check" style="margin-right: 20px">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault2"
+            />
+            <label class="form-check-label" for="flexRadioDefault2"
+              >재직자</label
+            >
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault3"
+            />
+            <label class="form-check-label" for="flexRadioDefault3"
+              >퇴사자</label
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a
+      class="btn btn-primary"
+      href="../Commute/commuteStatusList.html"
+      role="button"
+      >검색(F8)</a
+    >
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
